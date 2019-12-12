@@ -23,3 +23,5 @@ Route::post('create-user','userProfileController@createUser');
 Route::post('update-user','userProfileController@updateUser');
 //delete data
 Route::post('delete-user','userProfileController@deleteUser');
+//login
+Route::post('login','loginController@userLogin');
