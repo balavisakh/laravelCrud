@@ -28,10 +28,17 @@ class userProfileController extends Controller
     	$age = $request['user_age'];
     	$email = $request['user_email'];
     	$details = $request['user_details'];
-
-    	$userUpdate = userProfileModel::where('id',$id)->update(['name'=>$name,'user_age'=>$age,'user_email'=>$email,'user_details'=>$details]);
-    	return response()->json("updated");
+        $userUpdate = userProfileModel::where('id',$id)->update(['name'=>$name,'user_age'=>$age,'user_email'=>$email,'user_details'=>$details]);
+        return response()->json("updated");
     }
+
+    public function getUserById(Request $request){
+        $id = $request['id'];
+        $userData = userProfileModel::where('id',$id)->get();
+        return response()->json($userData);
+    }
+
+    	
 
     //delete user
     public function deleteUser(Request $request){

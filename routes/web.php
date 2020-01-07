@@ -21,6 +21,7 @@ Route::post('user-profile','userProfileController@userProfile');
 Route::post('create-user','userProfileController@createUser');
 //update data
 Route::post('update-user','userProfileController@updateUser');
+Route::post('get-user_by_id','userProfileController@getUserById');
 //delete data
 Route::post('delete-user','userProfileController@deleteUser');
 //login

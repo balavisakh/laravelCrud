@@ -12,9 +12,9 @@ class loginController extends Controller
     	$password = $request['user_password'];
     	$qry = loginModel::where('user_email','=',$email)->where('user_password','=',$password)->first();
     	if($qry == true){
-    		return response()->json("login success");
+    		return response()->json("success");
     	}else{
-    		return response()->json("login failed");
+    		return response()->json("failed");
     	}
     }
 }
